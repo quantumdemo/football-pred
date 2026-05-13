@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0a0a0a;
+  --color-foreground: #ffffff;
+  --color-primary: #00ff00; /* Neon Green */
+  --color-secondary: #1a1a1a;
+  --color-accent: #00ff00;
+  --color-card: #141414;
+  --color-card-foreground: #ffffff;
+  --color-muted: #888888;
+  --color-muted-foreground: #aaaaaa;
+  --color-border: #333333;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 120 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 120 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 120 100% 50%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.neon-glow {
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+}
+
+.neon-border {
+  border: 1px solid rgba(0, 255, 0, 0.5);
+}
+
+.glass-card {
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
